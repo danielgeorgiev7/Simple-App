@@ -17,11 +17,11 @@ function UserCard({ info }) {
             <strong>Phone:</strong> {phone}
           </p>
           <p>
-            <strong>Website:</strong> <a href={website}>{website}</a>
-          </p>
-          <p>
             <strong>Address:</strong> {address?.city}, {address?.street},{" "}
             {address.suite}
+          </p>
+          <p>
+            <strong>Website:</strong> <a href={website}>{website}</a>
           </p>
         </div>
         <Map position={[address?.geo?.lat, address?.geo?.lng]} />

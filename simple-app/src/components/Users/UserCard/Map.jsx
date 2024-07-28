@@ -6,7 +6,10 @@ function Map({ position }) {
     <MapContainer
       center={position}
       zoom={4}
-      style={{ height: "20rem", width: "100%" }}
+      style={{ height: "21.5rem", width: "100%", borderRadius: "1rem" }}
+      scrollWheelZoom={false}
+      dragging={false}
+      zoomControl={false}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={position}>

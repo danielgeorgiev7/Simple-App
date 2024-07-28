@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  font-size: 1.5rem;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -12,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 a {
@@ -26,7 +26,7 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url("./bg-image.png");
 }
 
@@ -65,4 +65,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.leaflet-control-attribution {
+  display: none;
 }
