@@ -1,0 +1,6 @@
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 5vh 17.5vw;
+}

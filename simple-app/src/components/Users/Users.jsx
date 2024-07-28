@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Loader from "../Loader/Loader";
-import User from "./User/User";
+import UserCard from "./UserCard/UserCard";
+import "./Users.css";
 
 const jsonPlaceholderUsersLink = "https://jsonplaceholder.typicode.com/users/";
 
@@ -31,7 +32,7 @@ function Users() {
   ) : (
     <div className="users-list">
       {users.map((user) => (
-        <User key={user.id} info={user} />
+        <UserCard key={user.id} info={user} />
       ))}
     </div>
   );
