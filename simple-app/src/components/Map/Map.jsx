@@ -5,11 +5,12 @@ function Map({ settings }) {
   return (
     <MapContainer
       center={settings.position}
-      zoom={settings.zoom}
       style={settings.style}
+      zoom={settings.zoom}
+      zoomControl={settings.zoomControl}
+      doubleClickZoom={settings.doubleClickZoom}
       scrollWheelZoom={settings.scrollWheelZoom}
       dragging={settings.dragging}
-      zoomControl={settings.zoomControl}
       className="map"
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

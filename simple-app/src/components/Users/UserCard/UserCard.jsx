@@ -8,11 +8,12 @@ function UserCard({ info }) {
 
   const mapSettings = {
     position: [address?.geo?.lat, address?.geo?.lng],
-    zoom: 3,
     style: { height: "21.5rem", width: "100%", borderRadius: "1rem" },
+    zoom: 3,
+    zoomControl: false,
+    doubleClickZoom: false,
     scrollWheelZoom: false,
     dragging: false,
-    zoomControl: false,
   };
 
   function LearnMoreHandler() {
