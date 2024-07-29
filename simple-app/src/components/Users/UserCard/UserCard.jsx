@@ -1,7 +1,24 @@
-import Map from "./Map";
+import { useAppContext } from "../../../contexts/AppContext";
+import Map from "../../Map/Map";
 import "./UserCard.css";
 function UserCard({ info }) {
   const { username, name, phone, email, website, company, address } = info;
+
+  const { setError } = useAppContext();
+
+  const mapSettings = {
+    position: [address?.geo?.lat, address?.geo?.lng],
+    zoom: 3,
+    style: { height: "21.5rem", width: "100%", borderRadius: "1rem" },
+    scrollWheelZoom: false,
+    dragging: false,
+    zoomControl: false,
+  };
+
+  function LearnMoreHandler() {
+    setError("You have learned a lot! Have a 15 minute break.");
+  }
+
   return (
     <div className="card-wrapper">
       <div className="card">
@@ -24,7 +41,7 @@ function UserCard({ info }) {
             <strong>Website:</strong> <a href={website}>{website}</a>
           </p>
         </div>
-        <Map position={[address?.geo?.lat, address?.geo?.lng]} />
+        <Map settings={mapSettings} />
       </div>
       <hr />
       <div className="company-info">
@@ -36,7 +53,9 @@ function UserCard({ info }) {
           {company?.bs.slice(0, 1).toUpperCase() + company?.bs.slice(1)}
         </p>
         <p className="company-motto">&quot;{company?.catchPhrase}&quot;</p>
-        <button className="btn">Learn More</button>
+        <button className="btn" onClick={LearnMoreHandler}>
+          Learn More
+        </button>
       </div>
     </div>
   );

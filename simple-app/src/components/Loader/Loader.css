@@ -1,0 +1,40 @@
+.loader {
+  margin-top: 12rem;
+  width: 1.8rem;
+  height: fit-content;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  box-shadow:
+    -20px 0px,
+    20px 0px;
+  animation: l18 1s infinite;
+}
+
+.loader-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+@keyframes l18 {
+  25% {
+    box-shadow:
+      -2.4rem -2.4rem,
+      2.4rem 2.4rem;
+  }
+  50% {
+    box-shadow:
+      0px -2.4rem,
+      0px 2.4rem;
+  }
+  75% {
+    box-shadow:
+      2.4rem -2.4rem,
+      -2.4rem 2.4rem;
+  }
+  100% {
+    box-shadow:
+      2.4rem 0px,
+      -2.4rem 0px;
+  }
+}
