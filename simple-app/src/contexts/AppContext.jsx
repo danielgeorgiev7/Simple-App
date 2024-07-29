@@ -24,7 +24,7 @@ export function AppProvider({ children }) {
         const data = await response.json();
         setUsers(data);
       } catch (err) {
-        setError(err.message || "An error occurred");
+        setError(err.message || "An error occurred. Try refreshing the site.");
       } finally {
         setIsLoading(false);
       }

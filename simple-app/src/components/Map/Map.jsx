@@ -10,6 +10,7 @@ function Map({ settings }) {
       scrollWheelZoom={settings.scrollWheelZoom}
       dragging={settings.dragging}
       zoomControl={settings.zoomControl}
+      className="map"
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={settings.position}>
