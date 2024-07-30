@@ -39,7 +39,7 @@ function UserCard({ info }) {
             {address.suite}
           </p>
           <p>
-            <strong>Website:</strong> <a href={website}>{website}</a>
+            <strong>Website:</strong> <a href="/">{website}</a>
           </p>
         </div>
         <Map settings={mapSettings} />
